@@ -20,7 +20,7 @@ type UserType = {
   email?: string | null;
 };
 
-const UserDropdown = ({ user }: { user?: UserType | null }) => {
+const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: StockWithWatchlistStatus[]}) => {
   const router = useRouter();
 
   // 🧤 guard clause: handle missing user
